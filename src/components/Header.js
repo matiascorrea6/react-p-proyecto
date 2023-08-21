@@ -1,16 +1,19 @@
 import NavLinks from '../widgets/NavLinks'
 import Carrito from '../widgets/Carrito'
+import { Link } from 'react-router-dom'
 
 function Header() {
 
 
 
     return (
+        
         <nav className="flex justify-between items-center bg-black text-white p-5">
             
             <NavLinks/>
-            <a href="#" className='text-5xl'>Mi pagina </a>
+            <Link to="/" className='text-5xl'>Mi pagina </Link>
             <Carrito/>   
+        
         </nav>
     );
 }

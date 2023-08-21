@@ -4,11 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
 
 body{
-    background-color: #11122c;
-}
-
-#footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(9,24,60,1) 100%);
 }

@@ -1,7 +1,16 @@
+import Productos from '../widgets/Productos'
+
 function Home() {
+
+
     return (
         <>
-            <p>Home</p>
+            <div className='flex justify-center p-8 m-8'>
+                <h1>Mi Pagina</h1>
+            </div>
+            <div>    
+                <Productos />
+            </div>
         </>
     )
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function NavLinks() {
     
-    let [show,setShow] = useState(false) 
+    let [show,setShow] = useState(true) 
 
     const toggleMenu = () => {
         setShow(!show) 
@@ -17,12 +17,13 @@ function NavLinks() {
         )
     } else {
         return (
-            <div className="flex static ">
-                <button onClick={toggleMenu} className="absolute material-symbols-outlined">menu</button>
+            <div className="flex">
+                <button onClick={toggleMenu} className="material-symbols-outlined">menu</button>
                 <ul className="flex flex-col items-center text-2xl space-x-4">
-                    <Link to="/home">Home</Link>
-                    <Link to="/productos">Productos</Link>
-                    <Link to="/contacto">contacto</Link>
+                    
+                    <Link to="/productos"> productos </Link>
+                    <Link to="/contacto"> contacto </Link>
+                
                 </ul>
             </div>
         )

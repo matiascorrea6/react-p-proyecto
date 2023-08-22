@@ -1,44 +1,48 @@
-import { useEffect, useState } from "react"
-import CardView from "../pages/CardView"
+const productos = [
+    {
+        id: 1,
+        nombre: "Jordan 1",
+        category: "zapatillas",
+        precio: 150,
+        img: 'jordan1.jpg'
+        },
+    {id: 2, nombre: "Yeezy", category: "zapatillas", precio: 110, img: 'yeezy.png'},
+    {id: 3, nombre: "puma", category: "zapatillas", precio: 90, img: 'puma.png'},
+    {id: 4, nombre: "jordan-azul", category: "zapatillas", precio: 90, img: 'jordan-azul.png'},
+    {id: 5, nombre: "air-marron", category: "zapatillas", precio: 90, img: 'airjprdan.png'},
+    {id: 6, nombre: "air-negras", category: "zapatillas", precio: 90, img: 'air-negras.png'},
+    {id: 7, nombre: "Ozweego", category: "zapatillas", precio: 90, img: 'ozweego.png',},
+    {id: 8, nombre: "jordan-marron", category: "zapatillas", precio: 90, img: 'nike-marron.png'},
+    {id: 9, nombre: "Jordan 2", category: "zapatillas", precio: 150, img: 'jordan1.jpg'},
+    {id: 10, nombre: "Yeezy2", category: "zapatillas", precio: 110, img: 'yeezy.png'},
+    {id: 11, nombre: "puma2", category: "zapatillas", precio: 90, img: 'puma.png'},
+    {id: 12, nombre: "jordan-azul2", category: "zapatillas", precio: 90, img: 'jordan-azul.png'},
+    {id: 13, nombre: "air-marron2", category: "zapatillas", precio: 90, img: 'airjprdan.png'},
+    {id: 14, nombre: "air-negras2", category: "zapatillas", precio: 90, img: 'air-negras.png'},
+    {id: 15, nombre: "Ozweego2", category: "zapatillas", precio: 90, img: 'ozweego.png'},
+    {id: 16, nombre: "jordan-marron2", category: "zapatillas", precio: 90, img: 'nike-marron.png'},
+]
 
-function Productos() {
-
-    const [ data, setData ] = useState([])
-
-    useEffect(()=>{
-        Productos()
-    }, [])
-
-
-    const Productos = () => {
+export const getProductos = () => {
+    return new Promise((resolve) => {
         setTimeout(() => {
-            let data = [
-                {id: 1, nombre: "Jordan 1", precio: 150, img: 'jordan1.jpg',},
-                {id: 2, nombre: "Yeezy", precio: 110, img: 'yeezy.png',},
-                {id: 3, nombre: "puma", precio: 90, img: 'puma.png',},
-                {id: 4, nombre: "jordan-azul", precio: 90, img: 'jordan-azul.png',},
-                {id: 5, nombre: "air-marron", precio: 90, img: 'airjprdan.png',},
-                {id: 6, nombre: "air-negras", precio: 90, img: 'air-negras.png',},
-                {id: 7, nombre: "Ozweego", precio: 90, img: 'ozweego.png',},
-                {id: 8, nombre: "jordan-marron", precio: 90, img: 'nike-marron.png',},
-                {id: 9, nombre: "Jordan 2", precio: 150, img: 'jordan1.jpg',},
-                {id: 10, nombre: "Yeezy2", precio: 110, img: 'yeezy.png',},
-                {id: 11, nombre: "puma2", precio: 90, img: 'puma.png',},
-                {id: 12, nombre: "jordan-azul2", precio: 90, img: 'jordan-azul.png',},
-                {id: 13, nombre: "air-marron2", precio: 90, img: 'airjprdan.png',},
-                {id: 14, nombre: "air-negras2", precio: 90, img: 'air-negras.png',},
-                {id: 15, nombre: "Ozweego2", precio: 90, img: 'ozweego.png',},
-                {id: 16, nombre: "jordan-marron2", precio: 90, img: 'nike-marron.png',},
-            ]
-            setData(data)
-        }, 2000);
-    }
-    
-    return (
-        <>
-        <CardView data={data} />
-        </>
-    )
+            resolve(productos)
+    }, 500)
+    })
 }
 
-export default Productos
+/* export const getProductsById = (id) => {
+    return new Promise((filter) => {
+        setTimeout(() => {
+            filter(productos.find(prod => prod.id === id))
+        }, 1000);
+    })
+} */
+
+/* export const getProductsByCategory = (category) => {
+    return new Promise((filter) => {
+        setTimeout(() => {
+            filter(productos.find(prod => prod.category === category))
+        }, 1000);
+    })
+} */

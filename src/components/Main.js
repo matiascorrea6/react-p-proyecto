@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from '../pages/Home'
 import Contacto from '../pages/Contacto'
-import Productos from '../widgets/Productos'
+import Card from '../widgets/Card'
 
 
 function Main() {
@@ -12,9 +12,9 @@ function Main() {
         <main className="text-3xl text-white">
             <Routes>
                 <Route path="/" element={<Home/>}></Route>
-                <Route path="/productos" element={<Productos/>} />
+                <Route path="/productos" element={<Card/>} />
                 <Route path="/contacto" element={<Contacto/>}></Route>
-                <Route path="/detalle" element={<p> detalle </p>}></Route>
+                <Route path="/productos/:id" element={<p> detalle </p>}></Route>
             </Routes>
         </main>
     );

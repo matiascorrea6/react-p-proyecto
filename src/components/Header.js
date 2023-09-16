@@ -8,10 +8,10 @@ function Header() {
 
     return (
         
-        <nav className="flex fixed top-0 w-full h-20 justify-between items-center bg-neutral-900 text-white p-5">
+        <nav className="navBar">
             
             <NavLinks/>
-            <Link to="/" className='text-5xl'>Mi pagina </Link>
+            <Link to="/" className='linkPagina'>Sneakers </Link>
             <Carrito/>   
         
         </nav>

@@ -1,37 +1,40 @@
 import { Link } from "react-router-dom"
+import { Card, Button } from "react-bootstrap";
 
 function CardView(props) {
 
     return (
 
-        <section className="flex flex-wrap justify-center p-10 m-10">
-            
-            {props.productos.length === 0 ? "cargando.."
-            : props.productos.map((item,i)=>{
-                return (
-                    <article key={i} className="flex flex-col h-auto w-80 p-10 m-10 border-gray-100 shadow-2xl">
-                        
-                        <picture className=" h-auto w-auto">
-                            <img src={item.img} alt="" />
-                        </picture>
-                        
-                        <header>
-                            <h2 className="">
-                                {item.nombre}
-                            </h2>
-                            <button className="rounded-full">
-                                ${item.precio}
-                            </button>
-                        </header>
+        <section className="mainProductos">
 
-                        <button className="botonDetalle">
-                            <Link to="/productos/:id">ver detalle</Link>
-                        </button>
-    
-                    </article>
-                )
-            })}
-        
+            <div className="h2productos">
+                <h2 className="h2">Productos</h2>
+            </div>   
+            
+            <div className="catalogo">
+                {props.productos.length === 0 ? "cargando.."
+                : props.productos.map((item,i)=>{
+
+                    return (
+                        <Card key={i} className="card">
+
+                            <Card.Img className="cardImg" variant="top" src={item.img} />
+
+                            <Card.Body>
+                                <Card.Title className="cardNombre">
+                                    {item.nombre}
+                                </Card.Title>
+                                <Card.Text className="cardPrecio">
+                                    ${item.precio}
+                                </Card.Text>
+                                <Button variant="dark">
+                                    <Link to="/productos/:id" className="botonDetalle">ver detalle</Link>
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                    )
+                })}
+            </div>
         </section>
     )
 }

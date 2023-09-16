@@ -1,7 +1,8 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom"
 import Home from '../pages/Home'
 import Contacto from '../pages/Contacto'
 import Card from '../widgets/Card'
+import CardId from '../widgets/CardId'
 
 
 function Main() {
@@ -14,7 +15,7 @@ function Main() {
                 <Route path="/" element={<Home/>}></Route>
                 <Route path="/productos" element={<Card/>} />
                 <Route path="/contacto" element={<Contacto/>}></Route>
-                <Route path="/productos/:id" element={<p> detalle </p>}></Route>
+                <Route path="/productos/:id" element={<CardId/>}></Route>
             </Routes>
         </main>
     );

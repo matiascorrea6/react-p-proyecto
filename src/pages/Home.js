@@ -5,8 +5,8 @@ function Home() {
 
     return (
         <>
-            <div className='flex justify-center h-16 p-12 m-12'>
-                <h1>Mi Pagina</h1>
+            <div className='h1'>
+                <h1>Sneakers</h1>
             </div>
             <div>    
                 <Card />

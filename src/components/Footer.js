@@ -2,7 +2,7 @@ function Footer() {
 
     return (
         <footer className="">
-            <p className="flex justify-center text-xl text-white p-8">
+            <p className="footer">
                 &copy; Copyright 2023 - Matias Correa 
             </p>
         </footer>
